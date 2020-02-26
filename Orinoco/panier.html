@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Panier</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-light bg-light bg-dark">
+          <a class="navbar-brand text-white" href="index.html">Articles</a>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active text-white" href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+            </li>
+          </ul>
+        </nav>
+    
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center vh-100">
+
+        <article class="col-md-10 col-lg-6">
+          <div class="border shadow-sm p-3">
+            <p>Modèle : <span id="resultName"></span></p> 
+            <p>Option : <span id="resultOptions"></span></p> 
+            <p>Quantité: <span id="resultQuantity"></span></p> 
+            <p>Prix : <span id="resultPrice"></span></p> 
+            <div class="text-center">
+              <button type="button" onclick="window.location.href = 'confirmation.html';" class="btn btn-success">Valider la commande</button>
+            </div>
+          </div>
+      </article>
+    </main>
+
+    <script src="js/panier.js"></script>
