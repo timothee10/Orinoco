@@ -8,7 +8,7 @@
     <title>Panier</title>
 </head>
 
-<body>
+<body class="bg-light">
 
     <header>
         <nav class="navbar navbar-light bg-light bg-dark">
@@ -22,19 +22,60 @@
     
     </header>
 
-    <main class="d-flex align-items-center justify-content-center vh-100">
+    <main class="d-flex align-items-center justify-content-center">
 
-        <article class="col-md-10 col-lg-6">
+<div class="col-12">
+
+      <article class="col-lg-6 col-md-10 ml-auto mr-auto">
+          <h1 class="text-center">Panier</h1>
           <div class="border shadow-sm p-3">
-            <p>Modèle : <span id="resultName"></span></p> 
-            <p>Option : <span id="resultOptions"></span></p> 
-            <p>Quantité: <span id="resultQuantity"></span></p> 
-            <p>Prix : <span id="resultPrice"></span></p> 
-            <div class="text-center">
-              <button type="button" onclick="window.location.href = 'confirmation.html';" class="btn btn-success">Valider la commande</button>
+            <div class="col-12 col-12 row m-0" id="cart"></div>
+            <div class="text-center mt-3">
+              <button type="button" id="deleted" class="btn btn-danger">Vider le panier</button>
             </div>
-          </div>
       </article>
-    </main>
+
+      <article class="my-3 col-lg-6 col-md-10 ml-auto mr-auto" id="hidden">
+        <h1 class="text-center">Livraison</h1>
+        <div class="border shadow-sm p-3">
+          <div id="info"></div>
+          <form name="order">
+            <div class="row">
+              <div class="col">
+                <label for="firstname">Prénom</label>
+                <input type="text" class="form-control" name="firstname" placeholder="Prénom">
+              </div>
+              <div class="col">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" name="name" placeholder="Nom">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="adress">Adresse</label>
+                <input type="text" class="form-control" name="adress" placeholder="Adresse">
+              </div>
+              <div class="col">
+                <label for="city">Ville</label>
+                <input type="text" class="form-control" name="city" placeholder="Ville">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="text" class="form-control" name="email" placeholder="name@example.com">
+            </div>
+          <div class="text-center mt-3">
+            <button type="submit" id="validate" class="btn btn-success">Valider la commande</button>
+          </div>
+        </form>
+    </article>
+
+</div>
+  </main>
+
+  </body>
 
     <script src="js/panier.js"></script>
+
+    
+</html>
