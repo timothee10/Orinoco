@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<!-- import Bootstrap and icons -->
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Panier</title>
+</head>
+
+<body class="bg-light">
+<!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-light bg-light bg-dark">
+          <a class="navbar-brand text-white" href="index.html">Articles</a>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active text-white" href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a>
+            </li>
+          </ul>
+        </nav>
+    
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center">
+
+<div class="col-12">
+<!-- basket -->
+      <article class="col-lg-6 col-md-10 ml-auto mr-auto">
+          <h1 class="text-center">Panier</h1>
+          <div class="border shadow-sm p-3">
+            <div class="col-12 col-12 row m-0" id="cart"></div>
+            <div class="text-center mt-3">
+              <button type="button" id="deleted" class="btn btn-danger">Vider le panier</button>
+            </div>
+      </article>
+<!-- delivery form (visible if there are products in the basket) -->
+      <article class="my-3 col-lg-6 col-md-10 ml-auto mr-auto" id="hidden">
+        <h1 class="text-center">Livraison</h1>
+        <div class="border shadow-sm p-3">
+          <div id="info"></div>
+          <form name="order">
+            <div class="row">
+              <div class="col">
+                <label for="firstname">Prénom</label>
+                <input type="text" class="form-control" name="firstname" placeholder="Prénom">
+              </div>
+              <div class="col">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" name="name" placeholder="Nom">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="adress">Adresse</label>
+                <input type="text" class="form-control" name="adress" placeholder="Adresse">
+              </div>
+              <div class="col">
+                <label for="city">Ville</label>
+                <input type="text" class="form-control" name="city" placeholder="Ville">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="text" class="form-control" name="email" placeholder="name@example.com">
+            </div>
+          <div class="text-center mt-3">
+            <button type="submit" id="validate" class="btn btn-success">Valider la commande</button>
+          </div>
+        </form>
+    </article>
+
+</div>
+  </main>
+
+  </body>
+<!-- import javascript -->
+    <script src="js/panier.js"></script>
+
+    
+</html>
