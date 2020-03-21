@@ -1,3 +1,6 @@
+console.log(localStorage);
+
+
 // localstorage data recovery loop
 
 if (localStorage.length == 0){

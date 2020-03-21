@@ -1,2 +1,1 @@
-Orinoco frontend project
-# p6-orinoco
+Orinoco Frontend project
