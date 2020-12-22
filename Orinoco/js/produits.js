@@ -1,4 +1,4 @@
-// Récupération des ID produits via l'URL, sur la page Poduits.html
+// retrieving product IDs with dynamic address
 
 var checkURL = window.location.href.indexOf('?');
 
@@ -6,24 +6,25 @@ if(checkURL!=-1)
 {
   var end_url = window.location.href.substr(checkURL + 1);
 
-// Récupération des données de l'API
+// API data recovery with Fetch API
 fetch('http://localhost:3000/api/cameras/' + end_url)
   .then(response => {
     return response.json()
   })
   .then(data => {
-    //console.log(data.name)
 
-    // Envoi des données vers le DOM
+// sending data to the DOM
     document.getElementById('photos').innerHTML = `<img class="img-fluid" src="${data.imageUrl}" alt="Photographie du ${data.name}">`;
     document.querySelector("h2").innerHTML = data.name;
     document.querySelector("h3").innerHTML = (new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(data.price/100));
     document.querySelector("p").innerHTML = data.description;
+
+// loop for available options
     let optionsLength = data.lenses.length;
     for(let i = 0; i < optionsLength; i++){
       document.getElementById('options').innerHTML +=  `<option>${data.lenses[i]}</option>`;
     }
-
+// adding a new product in the localstorage
     document.querySelector("button").addEventListener("click", function(event){
   
       event.preventDefault(); 
@@ -38,6 +39,7 @@ fetch('http://localhost:3000/api/cameras/' + end_url)
       });            
 
 })
+// return to index in case of error
   .catch(err => {
     window.location.href =`index.html`;
   })

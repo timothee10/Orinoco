@@ -1,4 +1,4 @@
-  // Affichage dynamique des produit disponible sur l'index, via fetch()
+  // dynamic display of products available on the index with API Fetch
   
   fetch('http://localhost:3000/api/cameras')
     .then(response => response.json())

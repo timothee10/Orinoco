@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
+<!-- import Bootstrap and icons -->
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Panier</title>
 </head>
 
 <body class="bg-light">
-
+<!-- navigation bar -->
     <header>
         <nav class="navbar navbar-light bg-light bg-dark">
           <a class="navbar-brand text-white" href="index.html">Articles</a>
@@ -25,7 +26,7 @@
     <main class="d-flex align-items-center justify-content-center">
 
 <div class="col-12">
-
+<!-- basket -->
       <article class="col-lg-6 col-md-10 ml-auto mr-auto">
           <h1 class="text-center">Panier</h1>
           <div class="border shadow-sm p-3">
@@ -34,7 +35,7 @@
               <button type="button" id="deleted" class="btn btn-danger">Vider le panier</button>
             </div>
       </article>
-
+<!-- delivery form (visible if there are products in the basket) -->
       <article class="my-3 col-lg-6 col-md-10 ml-auto mr-auto" id="hidden">
         <h1 class="text-center">Livraison</h1>
         <div class="border shadow-sm p-3">
@@ -74,7 +75,7 @@
   </main>
 
   </body>
-
+<!-- import javascript -->
     <script src="js/panier.js"></script>
 
     
