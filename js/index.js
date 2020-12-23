@@ -1,6 +1,6 @@
   // dynamic display of products available on the index with API Fetch
   
-  fetch('http://localhost:3000/api/cameras')
+  fetch('https://theeb.fr:3000/api/cameras')
     .then(response => response.json())
     .then(data => {
       var articles = '';
