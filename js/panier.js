@@ -67,7 +67,7 @@ document.forms["order"].addEventListener("submit", function(e) {
 
 // sending a POST request to the API
     (async () => {
-      const Response = await fetch('https://api.orinoco.theeb.fr/api/cameras/order', {
+      const Response = await fetch('http://localhost:3001/api/cameras/order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

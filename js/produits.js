@@ -7,7 +7,7 @@ if(checkURL!=-1)
   var end_url = window.location.href.substr(checkURL + 1);
 
 // API data recovery with Fetch API
-fetch('https://api.orinoco.theeb.fr/api/cameras/' + end_url)
+fetch('http://localhost:3001/api/cameras/' + end_url)
   .then(response => {
     return response.json()
   })

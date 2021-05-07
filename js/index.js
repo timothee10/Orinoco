@@ -1,6 +1,6 @@
   // dynamic display of products available on the index with API Fetch
   
-  fetch('https://api.orinoco.theeb.fr/api/cameras')
+  fetch('http://localhost:3001/api/cameras')
     .then(response => response.json())
     .then(data => {
       var articles = '';
